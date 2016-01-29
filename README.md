@@ -7,7 +7,7 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 
 ## Usage
 
-The R script called run_analysis.R downloads the data set into a temporary directory and then does the following:
+The R script called `run_analysis.R` downloads the data set into a temporary directory and then does the following:
 
 1) Merges the training and the test sets to create one data set.  
 2) Extracts only the measurements on the mean and standard deviation for each measurement.  
