@@ -47,11 +47,11 @@ features <- arrange(features, V1)
 data_set_mean_std <- setnames(data_set_mean_std, names(data_set_mean_std)[3:68], as.character(features$V2))
 
 #### set each variable as a column ####
-data_set_gathered <- gather(data_set_mean_std, key = signal_axis_statistic, value = measurement, -activity_name, -subject_id)
-data_set_separated <- separate(data_set_gathered, signal_axis_statistic, c("signal", "axis", "statistic"))
+# data_set_gathered <- gather(data_set_mean_std, key = signal_axis_statistic, value = measurement, -activity_name, -subject_id)
+# data_set_separated <- separate(data_set_gathered, signal_axis_statistic, c("signal", "axis", "statistic"))
 
 #### name activities ####
-data_set_separated <- data_set_separated %>% 
+data_set_mean_std <- data_set_mean_std %>% 
   mutate(activity_name = gsub(1, "WALKING", activity_name)) %>%
            mutate(activity_name = gsub(2, "WALKING_UPSTAIRS", activity_name)) %>%
                     mutate(activity_name = gsub(3, "WALKING_DOWNSTAIRS", activity_name)) %>%
@@ -60,8 +60,8 @@ data_set_separated <- data_set_separated %>%
                                                mutate(activity_name = gsub(6, "LAYING", activity_name))
 
 #### group and summarize data ####
-data_set_grouped <- group_by(data_set_separated, subject_id, activity_name, signal, axis, statistic)
-data_set_summarized <- summarize(data_set_grouped, mean(measurement))
+data_set_grouped <- group_by(data_set_mean_std, subject_id, activity_name)
+data_set_summarized <- summarize_each(data_set_grouped, funs(mean))
 
 #### write to txt file ####
 write.table(data_set_summarized, "./temp/tidy_data.txt", row.names = FALSE)
