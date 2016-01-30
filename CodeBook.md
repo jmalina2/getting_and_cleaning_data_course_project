@@ -15,7 +15,7 @@ For each record in the dataset it is provided:
  
 - An identifier of the subject who carried out the experiment.
 
-## Description of files used from the dataset
+## Description of Files Used from Dataset
 
 - 'features.txt': List of all features.
  
@@ -31,7 +31,7 @@ For each record in the dataset it is provided:
  
 - 'subject_train.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
 
-## Transformations 
+## Transformations and Resulting Variables
 
 - Rename columns in `y_train.txt`, `y_test.txt`, `subject_train.txt` and `subject_test.txt` to be more descriptive.
 
