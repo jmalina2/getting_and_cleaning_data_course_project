@@ -47,4 +47,4 @@ For each record in the dataset it is provided:
 
 - Create a second, independent tidy data set with the average of each variable for each activity and each subject using the `group_by()` and `summarize()` functions.
 
-- Save the new data set by using `write.table()` to generate `tidy_data`.text.
+- Generate `tidy_data.txt` file using `write.table()`.
