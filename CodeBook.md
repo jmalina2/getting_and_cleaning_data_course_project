@@ -18,11 +18,17 @@ For each record in the dataset it is provided:
 ## Description of files used from the dataset
 
 - 'features.txt': List of all features.
+ 
 - 'activity_labels.txt': Links the class labels with their activity name.
+ 
 - 'X_train.txt': Training set.
+ 
 - 'y_train.txt': Training labels.
+ 
 - 'X_test.txt': Test set.
+ 
 - 'y_test.txt': Test labels.
+ 
 - 'subject_train.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
 
 ## Transformations 
