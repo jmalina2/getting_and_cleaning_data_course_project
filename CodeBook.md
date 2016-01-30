@@ -41,10 +41,8 @@ For each record in the dataset it is provided:
 
 - Isolate `mean()` and `std()` measurements from the data set using `grep()`.
 
-- Use `gather()` and `separate()` functions to set each variable as a column; resulting columns are "signal", "axis" and "statistic".
-
 - Based on the key in `activity_labels.txt`, use `gsub()` and `mutate()` to create descriptive names for activities in the data set.
 
-- Create a second, independent tidy data set with the average of each variable for each activity and each subject using the `group_by()` and `summarize()` functions.
+- Create a second, independent tidy data set with the average of each variable for each activity and each subject using the `group_by()` and `summarize_each()` functions.
 
 - Generate `tidy_data.txt` file using `write.table()`.
