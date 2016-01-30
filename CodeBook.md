@@ -35,7 +35,7 @@ For each record in the dataset it is provided:
 
 - Rename columns in `y_train.txt`, `y_test.txt`, `subject_train.txt` and `subject_test.txt` to be more descriptive.
 
-- For both the training and test data sets, merge subject and activity label data with observations in `X_train.txt` and X_test.txt`.
+- For both the training and test data sets, merge subject and activity label data with observations in `X_train.txt` and `X_test.txt`.
 
 - Combine the training and test data into a single data frame with `rbind()`.
 
